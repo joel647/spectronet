@@ -18,11 +18,13 @@ body{
 }
 
 
+
+
 .box{
     background: linear-gradient(200deg,#271c20b7, #3c8bbc2f );
     width: 92%;
     height: 100%;  
-    margin: 45px 0px 0px 40px;
+    margin: 35px 0px 0px 40px;
     /* margin: auto; */
     padding: 20px 45px 60px;
     border: 7px solid #2a2226dd;
@@ -32,11 +34,23 @@ body{
 }
 
 .box:hover{
+ 
     background: linear-gradient(160deg,#271c20e7, #86b0cb56 );
 }
 
 
-
+.allD{
+    background: linear-gradient(120deg,#271c201b, #1d1f23 );
+    border: 1px solid rgba(120, 170, 187, 0.543);
+    backdrop-filter: blur(10px);
+    box-shadow: 0.5px 4px  4px 4px rgba(120, 170, 187, 0.146);
+    padding: 0px 20px 0px;
+    margin: 30px 0px 0px;
+    border-radius: 16px;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
 
 #welcomeMessage {
     margin-bottom: 20px;
@@ -50,21 +64,65 @@ body{
     padding: 3.2px 40px 3.2px;
     font-size: 10px;
     text-align: center;
-    margin: 10px 0px 0px 260px ;
-    /* border: 2px solid #ffffffcb;    */
-    box-shadow: 0.5px 2px  0.5px#ffffffcb;
+    margin: 10px 0px 10% 260px ;
+    border-radius: 4px;
+    background:transparent ;
+    box-shadow: 0.5px 1px  0.5px#b1c6d48e;
 }
 
+#btn:hover{
+    background-color: rgba(42, 57, 62, 0.731);
+}
+
+
+/* tootip */
+.notAvailable {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .notAvailable .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    height: 110%;
+    background-color: rgba(31, 30, 30, 0.945);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 14px 0;
+    font-size: 14px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 58%;
+    margin-left: -60px;
+  }
+  
+  .notAvailable:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .notAvailable:hover.hover.h2{
+    opacity: 2;
+    color: red;
+
+  }
 #span{
-    border: 1px solid red;
     display: flex;
+    background: linear-gradient(120deg,#271c201b, #141619 );
+    border-radius: 8px;
     height: 65px;
-    margin: 0px 0px 40px;
+    margin: 0px 0px 40px
+}
+
+#span:hover{
+    background: linear-gradient(5deg,#271c20e4, #262b32fb );
 }
 
 .spanDivOne, .spanDivTwo{
-    border: 1px solid green;
-    width: 100%;
+    width: 90%;
 }
 
 #showBalance {
@@ -72,25 +130,27 @@ body{
     align-items: center;
     width:60%;
     text-align: center;
-    border: 1px solid wheat;
     margin: 10px 20% 0px;
 }
 
-#showBal{
+#tracHis{
     color:#fff;
     align-items: center;
     width:60%;
     text-align: center;
-    border: 1px solid wheat;
-    margin: 10px 20% 0px;
+    margin: 10px 10% 0px;
+    border: 1px solid red;
 }
 
 /* Responsive Grid */
 .grid {
+    position: sticky;
+    top: 0;
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    margin: 10px 0px 0px;
+    margin: auto;
+    /* margin: 20px 0px 0px; */
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -155,9 +215,21 @@ p {
 }
 
 @media(min-width:400px) {
+
+    
+    .span{
+        display: flex;
+    }
+
+    #showBalance{
+        width: 100%;
+    }
+
     .service:hover{
-    transform: rotate(4deg);
-    transition: 12sec ease-in-out;
+        transform: scale(0.9);
+        border-radius:32px;
+        transition: 9sec  ease-in ;
+        transition-duration: 1s;
     } 
 
     .service{
@@ -166,7 +238,7 @@ p {
     }
 
     .grid{
-        max-height: 400px;
+        margin-bottom: -10px;
     }
 
 
@@ -176,21 +248,30 @@ p {
     }
 }
 
+
+
+
 /* Responsive layout for larger screens */
 @media (min-width: 710px) {
  .grid{
-        grid-template-columns: repeat(2, 3fr);
+        grid-template-columns: repeat(2, 2fr);
         width: fit-content;
-        margin-left: 40px;
+        /* margin-left: 40px; */
    
       }
+
+      
+    #showBalance{
+        width: 60%;
+    }
+
 
       .container{
         width: fit-content;
   
       } 
       .service{
-      width: 200px;
+      width: 240px;
       }
     .service:hover{
      transform: rotate(7deg);
@@ -199,14 +280,16 @@ p {
     }
     
     #OtherServce{
-        margin-left: 50%;
+        margin-left: 0%;
         display: block;
         border: 1px solid  green;
      }
     
 }
 
-@media (min-width:800px) {
+
+
+@media (min-width:1013px) {
     .grid{
         grid-template-columns: repeat(3, 3fr);
         width: fit-content;
@@ -214,23 +297,35 @@ p {
       }
 
       .service{
-        width: 170px;
+        width: 245px;
       }
-
+  
+      #OtherServce{
+        margin-left: 50%;
+        display: block;
+        border: 1px solid  green;
+     }
+    
     
 }
 
-@media (min-width: 960px) {
 
+
+@media (min-width: 1120px) {
+
+    .box{
+        margin-bottom: -10%;
+    }
     .grid{
         grid-template-columns: repeat(3, 3fr);
         width: fit-content;
-        padding-bottom  : 60%;
-        margin-left:70px ;
+        padding-bottom  : -10%;
+        margin-top: 7px;
+        margin-left:10px ;
         }
 
         .service{
-            width: 210px;
+            width: 275px;
             height: 130px;
             padding: 5px;
           }  
@@ -241,7 +336,7 @@ p {
 
         #OtherServce{
            aspect-ratio: 12/4;
-           margin-left: 50%;
+           margin-left: 25%;
            border: 1px solid  green;
         }
 
@@ -249,9 +344,9 @@ p {
         .grid{
             grid-template-columns: repeat(4, 2fr);
             width: fit-content;
-            /* border: 1px solid red; */
             padding: 15px;
             margin: auto;
+            margin-top: 7px;
         }
 
         .service{

@@ -25,7 +25,7 @@ document.getElementById("airtimeForm").addEventListener("submit", function(event
     // Retrieve form values
     const provider = document.getElementById("provider").value;
     const phone = document.getElementById("phone").value;
-    const amount = document.getElementById("amount").value;
+    const amount = document.getElementById("amount").value; 
   
     // Basic validation (you could add more if necessary)
     if (!provider || !phone || !amount) {
@@ -34,10 +34,11 @@ document.getElementById("airtimeForm").addEventListener("submit", function(event
     }
   
     // Simulate purchase processing
-    document.getElementById("message").textContent = `Processing purchase of $${amount} airtime for ${provider}...`;
-  
+    document.getElementById("message").textContent = `Processing purchase of #${amount} airtime for ${provider}...`;
+
     setTimeout(() => {
-      document.getElementById("message").textContent = "Airtime purchased successfully!";
+      document.getElementById("message").textContent = ` #${amount} airtime for ${provider}  purchased successfully!...`;
     }, 2000); // Simulate delay
   });
   
+// '${provider}Airtime purchased successfully! ${provider}\\luidgusid;

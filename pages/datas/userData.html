@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
-    <script type="module" src="/pages/signin/sign.js"></script>
+    <title>testing datas</title>
     <link rel="stylesheet" href="/pages/signin/signin.css">
-    <script type="module" src="/pages/signin/sign.js"></script>
-</head>h
+</head>
 <body>
 
     <div class="Gnav">
@@ -25,11 +23,12 @@
             <a href="/pages/aboutus/aboutus.html">about us</a>
             <a href="/pages/faq/faq.html">faQ</a>
         </div>
+        
 
     </div>
 
     <div class="login-container">
-        <h2 id="headTag">Sign In</h2>
+        <h2>Sign In</h2>
         <form id="logInForm">
          
             <label for="firstName">firstName</label>
@@ -46,13 +45,7 @@
             placeholder="Enter your last name" 
             autocomplete="additional-name">
 
-            <label for="email">Date of birth:</label>
-            <input 
-            type="text" 
-            id="DOB" 
-            name="DOB" 
-            placeholder="Enter your date of birth" 
-            autocomplete="current-DOB ">
+          
             
             <label for="email">Email:</label>
             <input 
@@ -61,6 +54,14 @@
             name="Email" 
             placeholder="Enter your email" 
             autocomplete="email">
+
+            <label for="email">Date of birth:</label>
+            <input 
+            type="text" 
+            id="DOB" 
+            name="DOB" 
+            placeholder="Enter your date of birth" 
+            autocomplete="current-DOB ">
     
             <label for="password">Password:</label>
             <span class="form-group">
@@ -96,19 +97,17 @@
 
     
           <button  
-          id="signIn"
-          >
+          id="signIn">
           Sign In
-       
-        n </button>
+         </button>
            <p id="passwordError" class="error"> </p>
 
 
            
         </form>
-      </div>    
-
+      </div>
     
+      <script type="module" src="/pages/datas/usersData.js"></script>
 
     
 </body>

@@ -444,3 +444,8 @@ p {
   ::placeholder{
     color: rgba(173, 154, 154, 0.913);    
  }
+
+ #message{
+    color: #f5eee98b;
+    display: block;
+ }

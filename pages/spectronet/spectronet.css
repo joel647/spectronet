@@ -27,9 +27,11 @@ body{
     position: sticky;
     top: 0;
     backdrop-filter: blur(20px);
+    
 }
 
 .Gnav a{
+    box-shadow: 0.5px 1px  2px 1px rgba(120, 170, 187, 0.347);
     text-decoration: none;
     font-size: 17px;
     color: #dec9c9;
